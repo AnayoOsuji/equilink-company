@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #F4F1EC;       /* Overcast Sky warm off-white */
+    --bg-panel: #E8E4DD;      /* Soft parchment */
+    --bg-card: #FFFFFF;       /* Clean interior card */
+    --border-subtle: #DCD8D0;  /* Dividers & soft borders */
+    
+    --slate-blue: #5B7A96;    /* Primary Muted Slate Blue */
+    --slate-blue-hover: #7C97AE;
+    --slate-blue-dark: #3F5A73;
+
+    --sage: #8FA894;          /* Regulated / Calm / Confirmations */
+    --taupe: #B8AFA0;         /* Neutral state */
+    --ochre: #D9A15F;         /* Elevated / Dysregulated */
+    --terracotta: #C08B7A;    /* Crisis / Urgency / No-red alert */
+
+    --text-primary: #2C3238;   /* Soft dark charcoal, no glare */
+    --text-muted: #5C6570;
+
+    --sensory-saturation: 100%;
+  }
+
+  /* Dusk Mode (Low-Stimulation Dark Mode) */
+  .dusk-mode {
+    --bg-base: #2A2E35;       /* Dusk dark background */
+    --bg-panel: #343941;      /* Dusk panel background */
+    --bg-card: #24282F;       /* Dark card interior */
+    --border-subtle: #404652;  /* Dark border */
+
+    --slate-blue: #6A8CA9;
+    --slate-blue-hover: #8AA8C4;
+    --slate-blue-dark: #4F6D88;
+
+    --sage: #7A9680;
+    --taupe: #9E9689;
+    --ochre: #C48E4F;
+    --terracotta: #B07869;
+
+    --text-primary: #D8D5CE;  /* Warm off-white, no glare */
+    --text-muted: #9BA1AC;
+  }
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Sensory Custom Classes */
+.bg-overcast {
+  background-color: var(--bg-base);
+}
+
+.bg-parchment {
+  background-color: var(--bg-panel);
+}
+
+.bg-card-sensory {
+  background-color: var(--bg-card);
+}
+
+.border-sensory {
+  border-color: var(--border-subtle);
+}
+
+/* Primary Muted Slate Blue utilities */
+.bg-slate-blue {
+  background-color: var(--slate-blue);
+}
+.bg-slate-blue:hover {
+  background-color: var(--slate-blue-hover);
+}
+.bg-slate-blue:active {
+  background-color: var(--slate-blue-dark);
+}
+.text-slate-blue {
+  color: var(--slate-blue);
+}
+.border-slate-blue {
+  border-color: var(--slate-blue);
+}
+
+/* Semantic Status Utilities */
+.bg-sage { background-color: var(--sage); }
+.text-sage { color: var(--sage); }
+.border-sage { border-color: var(--sage); }
+
+.bg-taupe { background-color: var(--taupe); }
+.text-taupe { color: var(--taupe); }
+.border-taupe { border-color: var(--taupe); }
+
+.bg-ochre { background-color: var(--ochre); }
+.text-ochre { color: var(--ochre); }
+.border-ochre { border-color: var(--ochre); }
+
+.bg-terracotta { background-color: var(--terracotta); }
+.text-terracotta { color: var(--terracotta); }
+.border-terracotta { border-color: var(--terracotta); }
+
+/* Ensure transition is smooth and zero harsh flashes */
+* {
+  transition-property: color, background-color, border-color, filter;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}

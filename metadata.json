@@ -1,0 +1,6 @@
+{
+  "name": "EquiLink",
+  "description": "Centralized home-school communication hub and real-time emotional dashboard for autistic students.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
